@@ -5,38 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Roblox Scripting Tutorial - Pro</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Font Elegan dari Google -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
-    
-    <!-- SLOT ADSTERRA: SCRIPT HEADER (Pop-under / Social Bar taruh di sini) -->
-    <!-- <script type='text/javascript' src='//contoh.adsterra.com/invoke.js'></script> -->
 </head>
 <body>
 
-    <!-- Navbar Atas -->
+    <!-- Navbar Atas + Fitur Translate -->
     <header class="navbar">
         <div class="logo">
             <span class="icon">🎮</span> 
             <span>Roblox<span class="highlight">Dev</span> Tutorial</span>
         </div>
-        <a href="https://youtube.com/c/ChannelAnda" target="_blank" class="btn-youtube">Subscribe YouTube</a>
+        <div class="navbar-right">
+            <!-- Tempat Google Translate Otomatis Muncul -->
+            <div id="google_translate_element"></div>
+            <a href="https://youtube.com/c/ChannelAnda" target="_blank" class="btn-youtube">Subscribe YouTube</a>
+        </div>
     </header>
 
-    <div class="layout-container">
+    <!-- HALAMAN PEMBUKA (Tampil Pertama Kali) -->
+    <div id="intro-section" class="intro-container">
+        <h1>Selamat Datang di Masterclass Scripting Roblox</h1>
+        
+        <div class="intro-text">
+            <p><strong>Halo, selamat datang di panduan eksklusif pembuatan game Roblox!</strong></p>
+            
+            <p>Membuat game di Roblox bukan hanya sekadar bermain, melainkan sebuah seni merangkai logika, kreativitas, dan imajinasi. Banyak developer pemula yang merasa kesulitan saat pertama kali melihat kode-kode Lua. Namun, di website panduan ini, saya telah menyederhanakan semuanya khusus untuk Anda.</p>
+            
+            <!-- SILAKAN PASTE 1000 - 2000 KATA ANDA DI BAWAH INI -->
+            <p><em>(Catatan: Anda bisa menempelkan atau mengetik 1000 hingga 2000 kata kalimat pembukaan, cerita pengalaman Anda, atau penjelasan dasar Anda di sini. Cukup perbanyak tag &lt;p&gt; untuk paragraf baru. Website ini sudah didesain agar teks panjang sangat nyaman dibaca berkat jarak baris yang ideal.)</em></p>
+            
+            <p>Setiap script yang akan Anda temukan di halaman selanjutnya sudah saya uji coba (tested) dan dipastikan berfungsi 100% di Roblox Studio terbaru. Anda tidak perlu lagi mengetik ulang satu per satu dari video YouTube saya. Cukup pelajari logikanya, copy kodenya, dan paste di game Anda!</p>
+            <!-- AKHIR DARI TEKS 1000 KATA -->
+        </div>
+
+        <button class="btn-lanjut" onclick="masukKeTutorial()">LANJUT KE KODE SCRIPT 🚀</button>
+    </div>
+
+    <!-- HALAMAN MENU TUTORIAL UTAMA (Awalnya Disembunyikan) -->
+    <div id="tutorial-section" class="layout-container" style="display: none;">
+        
         <!-- Sidebar Menu -->
         <aside class="sidebar">
             <h3>Menu Tutorial</h3>
             <ul>
                 <li><a href="#" class="active">1. Cara Membuat Balok (Part)</a></li>
                 <li><a href="#">2. Script Efek Api</a></li>
-                <li><a href="#">3. Membuat Sistem Uang (Leaderstats)</a></li>
+                <li><a href="#">3. Membuat Sistem Uang</a></li>
                 <li><a href="#">4. Script Pintu Terkunci</a></li>
             </ul>
             
-            <!-- SLOT ADSTERRA: BANNER KECIL DI SIDEBAR -->
             <div class="ad-container sidebar-ad">
                 <p class="ad-label">Advertisement</p>
-                <!-- Taruh script banner 160x600 atau 300x250 Adsterra di sini -->
+                <!-- Iklan Adsterra 300x250 di sini -->
             </div>
         </aside>
 
@@ -45,22 +65,20 @@
             <div class="tutorial-header">
                 <span class="badge">Pemula</span>
                 <h1>Cara Membuat Balok (Part) dengan Script</h1>
-                <p>Di tutorial kali ini (sesuai video YouTube), kita akan memunculkan balok secara otomatis menggunakan script Lua di Roblox Studio.</p>
+                <p>Di tutorial kali ini, kita akan memunculkan balok secara otomatis menggunakan script Lua di Roblox Studio.</p>
             </div>
 
-            <!-- SLOT ADSTERRA: BANNER UTAMA DALAM ARTIKEL -->
             <div class="ad-container main-ad">
                 <p class="ad-label">Advertisement</p>
-                <!-- Taruh script banner 728x90 Adsterra di sini -->
+                <!-- Iklan Adsterra 728x90 di sini -->
             </div>
 
             <h2>1. Buka ServerScriptService</h2>
             <p>Pertama, buka Roblox Studio Anda, lalu cari folder <strong>ServerScriptService</strong> di bagian Explorer. Klik kanan dan pilih <code>Insert Object > Script</code>.</p>
 
             <h2>2. Masukkan Script Berikut</h2>
-            <p>Hapus kode bawaan <code>print("Hello world!")</code>, lalu copy-paste script di bawah ini:</p>
+            <p>Copy-paste script di bawah ini. Kode ini menginstruksikan Roblox untuk membuat sebuah objek baru berupa balok, mengatur ukurannya, dan memberinya warna neon.</p>
 
-            <!-- Box Kode Pro dengan Tombol Copy -->
             <div class="code-wrapper">
                 <div class="code-header">
                     <span class="lang-label">LUA</span>
@@ -79,13 +97,23 @@ part.BrickColor = BrickColor.new("Bright red")
 part.Material = Enum.Material.Neon
 part.Anchored = true -- Agar part tidak jatuh</code></pre>
             </div>
-
-            <div class="tutorial-footer">
-                <p>✅ Script ini akan memunculkan balok neon berwarna merah yang melayang di udara saat game di-play.</p>
-            </div>
         </main>
     </div>
 
+    <!-- Script Utama Anda -->
     <script src="script.js"></script>
+    
+    <!-- Script Google Translate -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'id', 
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
 </body>
 </html>
