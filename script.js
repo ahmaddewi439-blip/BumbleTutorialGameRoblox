@@ -1,17 +1,26 @@
+// Fungsi untuk masuk dari Landing Page ke Halaman Tutorial
+function masukKeTutorial() {
+    // Menyembunyikan halaman intro
+    document.getElementById("intro-section").style.display = "none";
+    
+    // Memunculkan halaman tutorial dengan display 'flex' (sesuai layout)
+    document.getElementById("tutorial-section").style.display = "flex";
+    
+    // Otomatis scroll sedikit ke atas agar rapi
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// Fungsi Copy Kode (Tetap sama seperti sebelumnya)
 function copyCode(button) {
-    // Mencari elemen <pre><code> terdekat dari tombol yang diklik
     const codeBlock = button.parentElement.nextElementSibling.querySelector('code');
     const textToCopy = codeBlock.innerText;
 
-    // Proses copy ke clipboard perangkat user
     navigator.clipboard.writeText(textToCopy).then(() => {
-        // Ubah teks tombol menjadi sukses
         const originalText = button.innerText;
         button.innerText = '✅ Berhasil Copy!';
-        button.style.backgroundColor = '#16a34a'; // Warna hijau
+        button.style.backgroundColor = '#16a34a'; 
         button.style.color = '#ffffff';
 
-        // Kembalikan tombol ke semula setelah 2 detik
         setTimeout(() => {
             button.innerText = originalText;
             button.style.backgroundColor = '';
