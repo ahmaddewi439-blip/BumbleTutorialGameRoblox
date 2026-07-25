@@ -27,15 +27,70 @@
         <h1>Selamat Datang di Masterclass Scripting Roblox</h1>
         
         <div class="intro-text">
-            <p><strong>Halo, selamat datang di panduan eksklusif pembuatan game Roblox!</strong></p>
-            
-            <p>Membuat game di Roblox bukan hanya sekadar bermain, melainkan sebuah seni merangkai logika, kreativitas, dan imajinasi. Banyak developer pemula yang merasa kesulitan saat pertama kali melihat kode-kode Lua. Namun, di website panduan ini, saya telah menyederhanakan semuanya khusus untuk Anda.</p>
-            
-            <!-- SILAKAN PASTE 1000 - 2000 KATA ANDA DI BAWAH INI -->
-            <p><em>(Catatan: Anda bisa menempelkan atau mengetik 1000 hingga 2000 kata kalimat pembukaan, cerita pengalaman Anda, atau penjelasan dasar Anda di sini. Cukup perbanyak tag &lt;p&gt; untuk paragraf baru. Website ini sudah didesain agar teks panjang sangat nyaman dibaca berkat jarak baris yang ideal.)</em></p>
-            
-            <p>Setiap script yang akan Anda temukan di halaman selanjutnya sudah saya uji coba (tested) dan dipastikan berfungsi 100% di Roblox Studio terbaru. Anda tidak perlu lagi mengetik ulang satu per satu dari video YouTube saya. Cukup pelajari logikanya, copy kodenya, dan paste di game Anda!</p>
-            <!-- AKHIR DARI TEKS 1000 KATA -->
+            <h2>Selamat Datang di Masterclass Scripting Roblox</h2>
+
+<p><strong>Halo para creator dan calon game developer masa depan! Selamat datang di dokumentasi dan panduan resmi Roblox Scripting.</strong> Jika Anda sampai di halaman ini melalui video YouTube saya, berarti Anda sudah mengambil langkah pertama yang sangat tepat untuk mengubah diri Anda dari seorang penikmat game menjadi seorang pencipta game profesional di platform Roblox.</p>
+
+<p>Dunia pengembangan game Roblox telah berkembang pesat dari sekadar tempat bermain kasual menjadi industri kreatif bernilai miliaran rupiah. Setiap harinya, jutaan pemain aktif di seluruh dunia membuka Roblox untuk mencari pengalaman baru—mulai dari game Simulator, RPG, Tycoon, hingga Obby. Namun, pernahkah Anda berpikir apa yang sebenarnya terjadi di balik layar sebuah game Roblox yang sukses? Jawabannya terletak pada satu hal utama: <strong>Scripting (Pemrograman)</strong>.</p>
+
+<h2>1. Mengubah Mindset: Dari Pemain Menjadi Developer</h2>
+<p>Banyak pemula mengira bahwa membuat game Roblox hanya soal menyusun blok-blok visual (Part) dan mempercantik tampilan warna di Roblox Studio. Desain visual memang penting, tetapi tanpa kode program, balok-balok tersebut hanyalah benda mati. Script adalah "jiwa" dan "otak" dari game Anda.</p>
+
+<p>Ketika Anda menulis script, Anda memberikan instruksi kepada mesin Roblox tentang bagaimana dunia Anda harus bekerja:</p>
+<ul>
+    <li>Bagaimana pintu terbuka saat pemain mendekat?</li>
+    <li>Bagaimana monster menyerang ketika melihat pemain?</li>
+    <li>Bagaimana uang (Coins) bertambah setiap kali pemain menyelesaikan sebuah quest?</li>
+    <li>Bagaimana sistem penyimpanan data (DataStore) menjaga inventaris pemain agar tidak hilang saat mereka keluar dari game?</li>
+</ul>
+
+<p>Semua interaksi unik yang membuat sebuah game seru, menantang, dan membuat pemain ketagihan dihasilkan dari barisan kode Lua yang tersusun dengan rapi. Di website ini, kita akan membongkar semua rahasia tersebut langkah demi langkah.</p>
+
+<h2>2. Mengapa Menggunakan Bahasa Pemrograman Lua?</h2>
+<p>Roblox menggunakan bahasa pemrograman bernama <strong>Lua</strong> (spesifiknya Luau, versi terkustomisasi dan sangat cepat yang dikembangkan oleh tim Roblox). Mengapa Roblox memilih Lua?</p>
+
+<p>Pertama, <strong>Lua sangat ramah pemula</strong>. Struktur sintaksisnya ditulis dengan gaya bahasa yang mirip dengan bahasa Inggris sehari-hari, sehingga mudah dibaca dan dipahami dibandingkan bahasa seperti C++ atau Java. Kedua, <strong>Lua sangat cepat dan ringan</strong>, membuat proses eksekusi game berjalan lancar tanpa beban sistem yang berat.</p>
+
+<p>Di dalam Roblox Studio, Anda akan mengenal tiga jenis script utama yang memiliki peran dan lokasi tugas berbeda:</p>
+<ul>
+    <li><strong>Script (Server Script):</strong> Berjalan di server pusat Roblox. Digunakan untuk logika utama game, memproses transaksi uang, menyimpan data pemain, dan mengontrol hal-hal yang berdampak pada semua pemain di server. Biasanya diletakkan di <code>ServerScriptService</code>.</li>
+    <li><strong>LocalScript (Client Script):</strong> Berjalan langsung di perangkat pemain (PC/HP/Tablet). Digunakan untuk menangani User Interface (GUI), efek suara pribadi, pergerakan kamera, dan respon tombol keyboard. Biasanya diletakkan di <code>StarterPlayerScripts</code> atau <code>StarterGui</code>.</li>
+    <li><strong>ModuleScript:</strong> Berfungsi sebagai tempat penyimpanan kode reusabel (dapat dipakai berulang kali) agar kode proyek Anda tidak berantakan. ModuleScript bisa dipanggil baik oleh Server Script maupun LocalScript.</li>
+</ul>
+
+<h2>3. Strategi Efektif Menggunakan Website & Bundle Tutorial Ini</h2>
+<p>Website dokumentasi ini sengaja didesain khusus bergaya modern dan rapi untuk mendampingi setiap video tutorial di channel YouTube saya. Tujuan utamanya adalah memudahkan proses belajar Anda agar tidak perlu lagi membuang waktu mengetik ulang script yang rumit huruf demi huruf dari layar video.</p>
+
+<p>Agar Anda mendapatkan hasil maksimal dari bundle tutorial ini, ikuti langkah-langkah belajar ideal berikut:</p>
+
+<p><strong>Langkah A: Tonton dan Pahami Konsep di Video</strong><br>
+Jangan langsung menyalin kode tanpa memahami maksudnya. Tonton video tutorial YouTube saya terlebih dahulu untuk mengetahui alur pikir (logic flow) dan alasan di balik penggunaan fungsi tertentu.</p>
+
+<p><strong>Langkah B: Gunakan Tombol "Copy Script"</strong><br>
+Buka menu tutorial yang Anda butuhkan di website ini, lalu klik tombol <code>Copy Script</code> yang tersedia di atas kotak kode. Kode akan otomatis tersimpan di clipboard perangkat Anda tanpa ada risiko salah ketik (typo).</p>
+
+<p><strong>Langkah C: Paste dan Uji Coba di Roblox Studio</strong><br>
+Buka Roblox Studio Anda, buat Script baru di folder yang ditunjukkan (seperti <code>ServerScriptService</code> atau <code>ReplicatedStorage</code>), lalu tempelkan kodenya. Tekan tombol **Play Test (F5)** untuk melihat hasilnya secara langsung.</p>
+
+<p><strong>Langkah D: Modifikasi dan Eksperimen</strong><br>
+Ini adalah kunci utama menjadi scripter hebat! Jangan berhenti setelah kode berhasil berjalan. Cobalah mengubah angka-angka parameter, mengganti warna, atau menambahkan fungsi baru sesuai imajinasi Anda sendiri. Jika terjadi error, buka jendela <code>Output</code> di Roblox Studio untuk melihat pesan merah yang menginformasikan letak kesalahan Anda.</p>
+
+<h2>4. Etika Kode & Kebiasaan Scripter Profesional</h2>
+<p>Salah satu perbedaan besar antara scripter pemula dan profesional terletak pada kerapihan kodenya. Seiring membesarnya proyek game Anda, jumlah kode yang ditulis bisa mencapai ribuan baris. Jika kode ditulis secara berantakan, Anda akan kesulitan memperbaiki kesalahan (debugging) di masa mendatang.</p>
+
+<p>Selalu terapkan prinsip-prinsip berikut saat menulis script:</p>
+<ul>
+    <li><strong>Gunakan Nama Variabel yang Jelas:</strong> Daripada menulis <code>local x = 100</code>, tuliskan <code>local maxPlayerHealth = 100</code>. Nama yang jelas memudahkan Anda mengingat fungsi variabel tersebut di kemudian hari.</li>
+    <li><strong>Berikan Komentar (Comments):</strong> Gunakan tanda dua strip (<code>--</code>) untuk menuliskan catatan penjelasan di dalam kode Anda. Komentar ini tidak akan dieksekusi oleh game, tetapi sangat membantu saat Anda membaca ulang kode tersebut.</li>
+    <li><strong>Indentasi yang Rapi:</strong> Manfaatkan tombol <code>Tab</code> untuk memberikan jarak pada baris kode di dalam fungsi, percabangan <code>if-then</code>, atau perulangan <code>for-loop</code>.</li>
+</ul>
+
+<h2>5. Siap Memulai Petualangan Anda?</h2>
+<p>Ingatlah bahwa setiap developer hebat yang gamenya dimainkan oleh jutaan orang saat ini juga memulainya dari nol—dari membuat balok pertama, memunculkan pesan "Hello World", dan berkali-kali mengalami error. Kunci dari kesuksesan scripting adalah <strong>konsistensi dan keberanian untuk mencoba</strong>.</p>
+
+<p>Website ini akan terus di-update seiring bertambahnya video tutorial baru di channel YouTube saya. Pastikan Anda menguji semua modul script dasar terlebih dahulu sebelum melangkah ke modul yang lebih kompleks seperti sistem pertarungan (Combat System) atau penyimpanan data otomatis (DataStore Service).</p>
+
+<p>Tanpa berlama-lama lagi, mari kita buka koleksi script dan instruksi lengkapnya. Klik tombol **LANJUT** di bawah ini untuk mengakses seluruh menu bundle kode Roblox!</p>
         </div>
 
         <button class="btn-lanjut" onclick="masukKeTutorial()">LANJUT KE KODE SCRIPT 🚀</button>
