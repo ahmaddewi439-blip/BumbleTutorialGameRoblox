@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roblox Scripting Tutorial - Pro</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Elegan dari Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- SLOT ADSTERRA: SCRIPT HEADER (Pop-under / Social Bar taruh di sini) -->
+    <!-- <script type='text/javascript' src='//contoh.adsterra.com/invoke.js'></script> -->
+</head>
+<body>
+
+    <!-- Navbar Atas -->
+    <header class="navbar">
+        <div class="logo">
+            <span class="icon">🎮</span> 
+            <span>Roblox<span class="highlight">Dev</span> Tutorial</span>
+        </div>
+        <a href="https://youtube.com/c/ChannelAnda" target="_blank" class="btn-youtube">Subscribe YouTube</a>
+    </header>
+
+    <div class="layout-container">
+        <!-- Sidebar Menu -->
+        <aside class="sidebar">
+            <h3>Menu Tutorial</h3>
+            <ul>
+                <li><a href="#" class="active">1. Cara Membuat Balok (Part)</a></li>
+                <li><a href="#">2. Script Efek Api</a></li>
+                <li><a href="#">3. Membuat Sistem Uang (Leaderstats)</a></li>
+                <li><a href="#">4. Script Pintu Terkunci</a></li>
+            </ul>
+            
+            <!-- SLOT ADSTERRA: BANNER KECIL DI SIDEBAR -->
+            <div class="ad-container sidebar-ad">
+                <p class="ad-label">Advertisement</p>
+                <!-- Taruh script banner 160x600 atau 300x250 Adsterra di sini -->
+            </div>
+        </aside>
+
+        <!-- Konten Utama -->
+        <main class="content">
+            <div class="tutorial-header">
+                <span class="badge">Pemula</span>
+                <h1>Cara Membuat Balok (Part) dengan Script</h1>
+                <p>Di tutorial kali ini (sesuai video YouTube), kita akan memunculkan balok secara otomatis menggunakan script Lua di Roblox Studio.</p>
+            </div>
+
+            <!-- SLOT ADSTERRA: BANNER UTAMA DALAM ARTIKEL -->
+            <div class="ad-container main-ad">
+                <p class="ad-label">Advertisement</p>
+                <!-- Taruh script banner 728x90 Adsterra di sini -->
+            </div>
+
+            <h2>1. Buka ServerScriptService</h2>
+            <p>Pertama, buka Roblox Studio Anda, lalu cari folder <strong>ServerScriptService</strong> di bagian Explorer. Klik kanan dan pilih <code>Insert Object > Script</code>.</p>
+
+            <h2>2. Masukkan Script Berikut</h2>
+            <p>Hapus kode bawaan <code>print("Hello world!")</code>, lalu copy-paste script di bawah ini:</p>
+
+            <!-- Box Kode Pro dengan Tombol Copy -->
+            <div class="code-wrapper">
+                <div class="code-header">
+                    <span class="lang-label">LUA</span>
+                    <button class="copy-btn" onclick="copyCode(this)">Copy Script</button>
+                </div>
+                <pre><code class="language-lua">-- Script untuk memunculkan Part baru
+local part = Instance.new("Part")
+
+-- Mengatur posisi dan ukuran
+part.Parent = workspace
+part.Position = Vector3.new(0, 10, 0)
+part.Size = Vector3.new(4, 4, 4)
+
+-- Mengatur warna dan material
+part.BrickColor = BrickColor.new("Bright red")
+part.Material = Enum.Material.Neon
+part.Anchored = true -- Agar part tidak jatuh</code></pre>
+            </div>
+
+            <div class="tutorial-footer">
+                <p>✅ Script ini akan memunculkan balok neon berwarna merah yang melayang di udara saat game di-play.</p>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
